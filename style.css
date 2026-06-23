@@ -55,13 +55,14 @@ a {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  width: min(270px, 42vw);
+  width: min(190px, 38vw);
 }
 
 .brand img {
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 54px;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -679,7 +680,7 @@ blockquote {
   }
 
   .brand {
-    width: min(210px, 55vw);
+    width: min(150px, 48vw);
   }
 
   .hero {
