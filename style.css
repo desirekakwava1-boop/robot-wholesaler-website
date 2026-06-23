@@ -54,38 +54,20 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-width: 220px;
+  flex: 0 0 auto;
+  width: min(270px, 42vw);
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  color: var(--white);
-  background: linear-gradient(135deg, var(--red), var(--black));
-  font-weight: 800;
-  letter-spacing: 0;
-}
-
-.brand strong,
-.brand small {
+.brand img {
   display: block;
-  line-height: 1.1;
-}
-
-.brand small {
-  color: var(--muted);
-  font-size: 0.78rem;
-  text-transform: uppercase;
+  width: 100%;
+  height: auto;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: clamp(12px, 1.8vw, 22px);
   font-weight: 700;
   font-size: 0.94rem;
 }
@@ -231,9 +213,12 @@ h1 {
   border-color: var(--white);
 }
 
-.button.disabled-button {
+.button.unavailable {
   cursor: not-allowed;
   opacity: 0.72;
+}
+
+.button.unavailable:hover {
   transform: none;
 }
 
@@ -694,15 +679,7 @@ blockquote {
   }
 
   .brand {
-    min-width: 0;
-  }
-
-  .brand strong {
-    font-size: 0.95rem;
-  }
-
-  .brand small {
-    font-size: 0.68rem;
+    width: min(210px, 55vw);
   }
 
   .hero {
